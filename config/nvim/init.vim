@@ -528,6 +528,9 @@ endif
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+# press Enter to use Auto-complete feature:
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 if !exists('g:airline_powerline_fonts')
   let g:airline#extensions#tabline#left_sep = ' '
